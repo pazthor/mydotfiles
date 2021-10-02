@@ -1,0 +1,5 @@
+% gradle
+
+#Start
+./gradlew clean && ./gradlew build && ./gradlew detekt
+
