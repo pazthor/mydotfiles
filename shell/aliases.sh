@@ -29,7 +29,8 @@ alias o.='open .'
 
 
 #work
-alias gdwall='./gradlew clean && ./gradlew build && ./gradlew detekt'
-alias gdwclean='./gradlew clean'
+alias gdwClean='./gradlew clean'
 alias gdwbld='./gradlew build'
 alias gdw='./gradlew detekt'
+alias gdwTest='./gradlew test'
+alias gdwall='gdwClean && ./gradlew detekt && ./gradlew build && ./gradlew test'
