@@ -6,31 +6,25 @@ alias ...="cd ../.."
 alias ll="ls -l"
 alias la="ls -la"
 alias ~="cd ~"
+alias dotfiles='cd $DOTFILES_PATH'
 
 # Git
 alias gaa="git add -A"
-alias gc="dot git commit"
+alias gc='$DOTLY_PATH/bin/dot git commit'
 alias gca="git add --all && git commit --amend --no-edit"
 alias gco="git checkout"
-alias gd="dot git pretty-diff"
+alias gd='$DOTLY_PATH/bin/dot git pretty-diff'
 alias gs="git status -sb"
 alias gf="git fetch --all -p"
 alias gps="git push"
 alias gpsf="git push --force"
 alias gpl="git pull --rebase --autostash"
 alias gb="git branch"
-alias gl="dot git pretty-log"
+alias gl='$DOTLY_PATH/bin/dot git pretty-log'
 
 # Utils
 alias k='kill -9'
 alias i.='(idea $PWD &>/dev/null &)'
 alias c.='(code $PWD &>/dev/null &)'
 alias o.='open .'
-
-
-#work
-alias gdwClean='./gradlew clean'
-alias gdwbld='./gradlew build'
-alias gdw='./gradlew detekt'
-alias gdwTest='./gradlew test'
-alias gdwall='gdwClean && ./gradlew detekt && ./gradlew build && ./gradlew test'
+alias up='dot package update_all'

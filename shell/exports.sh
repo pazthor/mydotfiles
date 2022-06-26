@@ -5,7 +5,7 @@ export CODELY_THEME_MINIMAL=false
 export CODELY_THEME_MODE="dark"
 export CODELY_THEME_PROMPT_IN_NEW_LINE=false
 export CODELY_THEME_PWD_MODE="short" # full, short, home_relative
-export CUDA="/usr/local/cuda-11/bin/"
+
 # ------------------------------------------------------------------------------
 # Languages
 # ------------------------------------------------------------------------------
@@ -16,8 +16,6 @@ export GOPATH="$HOME/.go"
 # ------------------------------------------------------------------------------
 # Apps
 # ------------------------------------------------------------------------------
-export NVM_DIR="$HOME/.nvm"
-
 if [ "$CODELY_THEME_MODE" = "dark" ]; then
   fzf_colors="pointer:#ebdbb2,bg+:#3c3836,fg:#ebdbb2,fg+:#fbf1c7,hl:#8ec07c,info:#928374,header:#fb4934"
 else
@@ -29,7 +27,7 @@ export FZF_DEFAULT_OPTS="--color=$fzf_colors --reverse"
 # ------------------------------------------------------------------------------
 # Path - The higher it is, the more priority it has
 # ------------------------------------------------------------------------------
-export path=(
+path+=(
   "$HOME/bin"
   "$DOTLY_PATH/bin"
   "$DOTFILES_PATH/bin"
@@ -46,5 +44,6 @@ export path=(
   "/usr/bin"
   "/usr/sbin"
   "/sbin"
-  "$CUDA"
 )
+
+export path
