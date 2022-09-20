@@ -1,0 +1,14 @@
+#!/usr/bin/env bash
+
+set -euo pipefail
+
+source "$DOTLY_PATH/scripts/core/_main.sh"
+
+##? Add a hello message
+##?
+##? Usage:
+##?    grep_search
+docs::parse "$@"
+
+
+grep -Hrni . 'config'

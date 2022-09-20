@@ -1,0 +1,23 @@
+#!/usr/bin/env bash
+
+set -euo pipefail
+
+source "$DOTLY_PATH/scripts/core/_main.sh"
+
+
+##? Ejemplo para usando el prefix desde un scvript
+##?
+##? Requirements:
+##?     tmux
+##?
+##? Usage:
+##?    tmpExample
+##?
+##? Notes:
+##?    
+##?     - Ctrl+C in rofi will copy it to the clipboard.
+docs::parse "$@"
+
+
+
+echo "excute"

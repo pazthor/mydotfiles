@@ -1,0 +1,27 @@
+#!/usr/bin/env bash
+
+set -euo pipefail
+
+source "$DOTLY_PATH/scripts/core/_main.sh"
+
+
+##? Muestra el cheatsheet  de tmux que tengo en la doc usando glow 
+##?
+##? Requirements:
+##?     tmux, glow
+##?
+##? Usage:
+##?    show_cheatsheet
+##?
+##? Notes:
+##?    
+
+
+docs::parse "$@"
+
+
+
+doc='/doc/tmux-cheatsheet.md'
+path=$DOTFILES_PATH$doc
+glow -p $path
+
