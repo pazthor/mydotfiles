@@ -9,9 +9,17 @@ export CODELY_THEME_PWD_MODE="short" # full, short, home_relative
 # ------------------------------------------------------------------------------
 # Languages
 # ------------------------------------------------------------------------------
-export JAVA_HOME='/Library/Java/JavaVirtualMachines/amazon-corretto-15.jdk/Contents/Home'
+#  diferencias entre MAc y Linux
+## java mac
+# export JAVA_HOME='/Library/Java/JavaVirtualMachines/amazon-corretto-15.jdk/Contents/Home'
+## java linux
+export JAVA_HOME='/usr/lib/jvm/default-java/'
+
+
 export GEM_HOME="$HOME/.gem"
 export GOPATH="$HOME/.go"
+
+export ANDROID_HOME='/home/pazth/Android/Sdk'
 
 # ------------------------------------------------------------------------------
 # Apps
@@ -28,6 +36,7 @@ export FZF_DEFAULT_OPTS="--color=$fzf_colors --reverse"
 # Path - The higher it is, the more priority it has
 # ------------------------------------------------------------------------------
 path+=(
+  "$DOTFILES_PATH/modules/git-fuzzy/bin"
   "$HOME/bin"
   "$DOTLY_PATH/bin"
   "$DOTFILES_PATH/bin"
