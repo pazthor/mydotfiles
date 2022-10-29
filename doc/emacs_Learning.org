@@ -1,0 +1,22 @@
+ titulo
+
+
+ para aprender
+
+==i
+i
+
+
+
+
+
+
+
+
+
+
+git clone git@github.com:redguardtoo/mastering-emacs-in-one-year-guide.git
+
+
+el framework que ando ocupando
+git@github.com:doomemacs/doomemacs.git
