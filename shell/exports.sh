@@ -19,6 +19,9 @@ export JAVA_HOME='/usr/lib/jvm/default-java/'
 export DOTNET_ROOT=$HOME/.dotnet
 export PATH=$PATH:$HOME/.dotnet:$HOME/.dotnet/tools
 
+### 1password for linux 
+export SSH_AUTH_SOCK=~/.1password/agent.sock
+
 ##
 export GEM_HOME="$HOME/.gem"
 export GOPATH="$HOME/.go"
