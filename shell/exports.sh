@@ -39,10 +39,17 @@ fi
 
 export FZF_DEFAULT_OPTS="--color=$fzf_colors --reverse"
 
+###
+# 1password
+export SSH_AUTH_SOCK=~/.1password/agent.sock
+
+###
+
 # ------------------------------------------------------------------------------
 # Path - The higher it is, the more priority it has
 # ------------------------------------------------------------------------------
 path+=(
+  "$HOME/.config/emacs/bin"
   "$DOTFILES_PATH/modules/git-fuzzy/bin"
   "$HOME/bin"
   "$DOTLY_PATH/bin"
