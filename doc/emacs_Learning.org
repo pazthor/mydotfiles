@@ -20,3 +20,21 @@ git clone git@github.com:redguardtoo/mastering-emacs-in-one-year-guide.git
 
 el framework que ando ocupando
 git@github.com:doomemacs/doomemacs.git
+
+
+
+* emacs daemon
+** para ejecutar el cliente
+emacsclient -c -a 'emacs'
+
+* Agregandolo como service
+** parar servicio 
+systemctl --user stop  emacs
+** para crear y levantar el servicio
+systemctl --user enable --now emacs
+
+
+
+
+* Fuentes
+https://emacsredux.com/blog/2020/07/16/running-emacs-with-systemd/

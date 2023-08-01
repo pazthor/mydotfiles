@@ -1,0 +1,5 @@
+emacs
+telegram-desktop
+obsidian
+alacritty
+tmux

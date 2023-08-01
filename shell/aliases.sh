@@ -31,4 +31,4 @@ alias up='dot package update_all'
 
 
 # shortcuts
-alias em='emacs -nw'
+alias em="emacsclient -t -a 'emacs'"
