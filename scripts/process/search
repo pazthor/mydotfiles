@@ -1,0 +1,9 @@
+ps -e | grep -E 'firefox|chrome'
+
+
+kill -9 pid_del_proceso
+
+
+
+
+source https://www.cyberciti.biz/faq/show-all-running-processes-in-linux/
