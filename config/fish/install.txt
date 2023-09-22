@@ -1,0 +1,29 @@
+
+* install
+
+pacman -S fish 
+** Default shell permanetly
+*** Add the shell to /etc/shells with:
+echo /usr/bin/fish | sudo tee -a /etc/shells
+*** Change your default shell with:
+ chsh -s /usr/bin/fish
+
+*** step 3
+reboot your system
+
+
+* add startship 
+# ~/.config/fish/config.fish
+
+starship init fish | source
+
+** source
+https://fishshell.com/docs/current/index.html#default-shell
+
+
+* terminal repo tools
+https://github.com/denisidoro/terminals-are-sexy#fish
+https://github.com/jorgebucaran/fisher
+https://github.com/oh-my-fish/oh-my-fish
+https://ubunlog.com/fish-linea-comandos-inteligente/
+

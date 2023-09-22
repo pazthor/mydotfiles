@@ -1,0 +1,4 @@
+## unzip file using bsdtar, example:
+
+$ bsdtar xvf archive.zip
+

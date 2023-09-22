@@ -1,0 +1,43 @@
+* Instalación  y configuración del sistema
+** install
+# ~/.config/fish/config.fish
+
+starship init fish | source
+
+** configuración mamalona
+Primero  creamos un archivo toml en el config:
+
+mkdir -p ~/.config && touch ~/.config/starship.toml
+
+** pegas la conf default de startship.toml
+ver link https://starship.rs/config/#configuration
+*** donde se guarda los archivos de configuración
+se pega en ~/.config/startship.toml 
+y se guarda en dotfiles/config/starthip/starship.toml
+
+** NOTA
+Queda pendiente linkear dotfiles/.../starthip.toml a ~/.config/starthip.toml
+
+
+** agregando un perfil:
+starship preset bracketed-segments -o ~/.config/starship.toml
+*** source
+https://starship.rs/presets/bracketed-segments.html
+
+
+* fonts instalación
+** pre step
+requiere nerd fonts
+en archlinux exite esta lista de repositorios
+https://archlinux.org/groups/any/nerd-fonts/
+yay -S ttf-firacode-nerd
+ttf-agave-nerd
+# esto instala todas las nerdfonts 
+sudo pacman -S $(pacman -Sgq nerd-fonts)
+
+** source
+https://www.behova.net/install-nerd-font-on-arch-linux/
+
+
+* source
+https://starship.rs/guide/#%F0%9F%9A%80-installation

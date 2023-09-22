@@ -1,0 +1,7 @@
+## A syntax-highlighting pager for git, diff, and grep output
+
+yay -S git-delta
+
+
+https://dandavison.github.io/delta/installation.html
+https://github.com/dandavison/delta

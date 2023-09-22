@@ -1,3 +1,8 @@
+#+TITLE: Configuración de Git preinstalación
+
+* configuración init file 
+
+#+begin_src sh
 git config --global user.email "hi.pazthor@gmail.com"
 git config --global user.name "pazthor"
-
+#+end_src

@@ -1,0 +1,26 @@
+## 
+
+### 1password
+# https://help.ubuntu.com/community/GnuPrivacyGuardHowto
+1password
+
+
+# Game
+steam
+
+# SOcial
+telegram-desktop
+
+
+## tools 
+### terminal 
+emacs 
+tmux
+## Browser
+### brave browser in endeaveur 
+brave-bin
+
+## dependency from apps
+
+####emacs/terminal and style  
+shell-color-scripts
