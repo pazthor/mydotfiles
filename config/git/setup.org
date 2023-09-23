@@ -30,6 +30,30 @@ export SSH_AUTH_SOCK=~/.1password/agent.sock
 #+begin_src sh
  ssh -T git@github.com
 #+end_src
+
+
+** Create new repository on github 
+de la docu de github
+Si tienes un repositorio nuevo 
+#+begin_src sh
+echo "# emacs" >> README.md
+git init
+git add README.md
+git commit -m "first commit"
+git branch -M main
+git remote add origin git@github.com:pazthor/emacs.git
+git push -u origin main
+
+#+end_src
+
+
+Si ya tienes un repo existente:
+#+begin_src sh
+git remote add origin git@github.com:pazthor/emacs.git
+git branch -M main
+git push -u origin main
+
+#+end_src
 ** Fuentes
 https://docs.github.com/es/authentication/connecting-to-github-with-ssh
 
