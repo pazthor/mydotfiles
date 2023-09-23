@@ -9,6 +9,8 @@ git config --global user.name "pazthor"
 
 * Configuración SSH client
 Esta sessión de momento la hacemos con oone password, de tal manera que como dependencia es necesario tener 1password, fin.
+
+Recuerda activar en tu cuenta de 1password la opción para comaprtir tus llaves ssh 
 ** configure ssh with 1password
 
 #+begin_src sh
@@ -23,3 +25,12 @@ Host *
 #+begin_src sh 
 export SSH_AUTH_SOCK=~/.1password/agent.sock
 #+end_src
+
+*** Prueba
+#+begin_src sh
+ ssh -T git@github.com
+#+end_src
+** Fuentes
+https://docs.github.com/es/authentication/connecting-to-github-with-ssh
+
+https://developer.1password.com/docs/ssh/agent/config/
