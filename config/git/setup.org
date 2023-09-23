@@ -6,3 +6,20 @@
 git config --global user.email "hi.pazthor@gmail.com"
 git config --global user.name "pazthor"
 #+end_src
+
+* Configuración SSH client
+Esta sessión de momento la hacemos con oone password, de tal manera que como dependencia es necesario tener 1password, fin.
+** configure ssh with 1password
+
+#+begin_src sh
+#path  ~/.ssh/config
+Host *
+  IdentityAgent ~/.1password/agent.sock
+
+#+end_src
+
+*** agregaando variable de entorno en la shell
+
+#+begin_src sh 
+export SSH_AUTH_SOCK=~/.1password/agent.sock
+#+end_src
