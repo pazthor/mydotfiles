@@ -1,0 +1,15 @@
+#!/usr/bin/env bash
+
+set -euo pipefail
+
+# Ensure DOTLY_PATH is set
+source "$DOTLY_PATH/scripts/core/_main.sh"
+
+##? start command
+##?
+##? Usage:
+##?     connect
+##?
+docs::parse "$@"
+wifi="ssid"
+nmcli --ask device wifi connect $wifi

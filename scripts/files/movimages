@@ -1,0 +1,31 @@
+#!/usr/bin/env bash
+
+set -euo pipefail
+
+# Ensure DOTLY_PATH is set
+
+source "$DOTLY_PATH/scripts/core/_main.sh"
+
+##? move images from the current folder to the right folder
+##?
+##? Usage:
+##?    mvimgs [options]
+##?
+docs::parse "$@"
+folder=~/Imágenes/
+
+# move all images to the right folder
+# first check if files exist
+for ext in jpg png gif jpeg webp; do
+    files=( *."$ext" )
+    if [ -e "${files[0]}" ]; then
+        mv *."$ext" "$folder"
+    fi
+done
+
+
+
+
+
+
+
