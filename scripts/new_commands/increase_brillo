@@ -1,0 +1,17 @@
+#!/usr/bin/env bash
+
+set -euo pipefail
+
+# Ensure DOTLY_PATH is set
+export DOTLY_PATH="${DOTLY_PATH:-/home/pazthor/IdeaProjects/dat}"
+source "$DOTLY_PATH/scripts/core/_main.sh"
+
+##? Incrementa el brillo por 60
+##?
+##? Usage:
+##?    increase_brightnesss
+##?
+docs::parse "$@"
+
+
+ddcutil --display 1 setvcp 10 + 60

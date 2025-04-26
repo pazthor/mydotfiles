@@ -1,0 +1,17 @@
+#!/usr/bin/env bash
+
+set -euo pipefail
+
+# Ensure DOTLY_PATH is set
+export DOTLY_PATH="${DOTLY_PATH:-/home/pazthor/IdeaProjects/dat}"
+source "$DOTLY_PATH/scripts/core/_main.sh"
+
+##? lista configuraciones preferidas para tu monitor 
+##?
+##? Usage:
+##?    comandos [options]
+##?
+docs::parse "$@"
+
+# Your command logic here
+niri msg outputs | grep -E 'Output|preferred'

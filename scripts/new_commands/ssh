@@ -1,0 +1,15 @@
+#!/usr/bin/env bash
+
+set -euo pipefail
+
+source "$DOTLY_PATH/scripts/core/_main.sh"
+
+##? entra al directorio de php
+##?
+##? Usage:
+##?    ssh
+docs::parse "$@"
+# remember, path must be exit
+directory='/var/www/html/<projectname>'
+
+ddev ssh -d $directory

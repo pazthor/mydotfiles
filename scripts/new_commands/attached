@@ -1,0 +1,17 @@
+#!/usr/bin/env bash
+
+set -euo pipefail
+
+# Ensure DOTLY_PATH is set
+source "$DOTLY_PATH/scripts/core/_main.sh"
+
+##? attached command
+##?
+##? Usage:
+##?    attached [options]
+##?
+docs::parse "$@"
+
+# Your command logic here
+#
+tmux attach -t $(tmux ls | fzf | awk '{print $1}') || echo "No se seleccionó ninguna sesión de tmux."

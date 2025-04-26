@@ -1,0 +1,14 @@
+#!/usr/bin/env bash
+
+set -euo pipefail
+
+source "$DOTLY_PATH/scripts/core/_main.sh"
+
+##? WIP:entra al directorio de php
+##? decarta un job de la cola
+##? Usage:
+##?    forget-jobs <id process>
+docs::parse "$@"
+
+ddev ssh -d /var/www/html/apps/experiences-app/
+php artisan queue:forget $1

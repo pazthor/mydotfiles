@@ -1,0 +1,41 @@
+set -euo pipefail
+
+source "$DOTLY_PATH/scripts/core/_main.sh"
+
+##? list commands tmux using fzf  
+##? to show help of a command use <command>
+##? 
+##? Usage:
+##?    help 
+docs::parse "$@"
+
+# Define useful tmux commands
+commands=(
+    "Rotar: [prefix] + [SPC] - Mover de izquierda a derecha"
+    "Intercambiar paneles: [prefix] + [}] - Intercambiar entre paneles"
+    # Agrega más comandos útiles aquí
+)
+
+# Use fzf to filter and list commands
+selected_command=$(printf "%s\n" "${commands[@]}" | fzf --prompt="Selecciona un comando: ")
+
+# Show the selected command
+if [[ -n "$selected_command" ]]; then
+    echo "Comando seleccionado: $selected_command"
+else
+    echo "No se seleccionó ningún comando."
+fi
+
+
+# prefix="ctrl + b" 
+# SPC="space"
+
+# rotar mover de izquierda a derecha
+# presionamos control b, soltamos y presionamos espacio
+# [prefix] + [SPC]
+
+# intercambiar entre paneles 
+# [prefix] + [}] 
+
+
+
